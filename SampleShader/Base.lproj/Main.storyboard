@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,163 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleShader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vjC-7o-aPm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uiR-1F-crS" customClass="ShaderArtView" customModule="SampleShader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="121.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsu-7y-C99">
+                                                <rect key="frame" x="90.5" y="21.5" width="233" height="79"/>
+                                                <string key="text">たぷたぷした
+アニメーション</string>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="33"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Tsu-7y-C99" firstAttribute="centerY" secondItem="uiR-1F-crS" secondAttribute="centerY" id="B1s-cd-lPj"/>
+                                            <constraint firstItem="Tsu-7y-C99" firstAttribute="centerX" secondItem="uiR-1F-crS" secondAttribute="centerX" id="jEd-jc-lhO"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWN-yo-6vc" customClass="ShaderArtView" customModule="SampleShader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="121.5" width="414" height="122"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="星" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36b-W2-R22">
+                                                <rect key="frame" x="190.5" y="41.5" width="33.5" height="39.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="33"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="36b-W2-R22" firstAttribute="centerY" secondItem="aWN-yo-6vc" secondAttribute="centerY" id="avX-05-FtW"/>
+                                            <constraint firstItem="36b-W2-R22" firstAttribute="centerX" secondItem="aWN-yo-6vc" secondAttribute="centerX" id="ltR-tc-lQ1"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdh-vN-Or6" customClass="ShaderArtView" customModule="SampleShader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="243.5" width="414" height="121.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a8-vy-8cy">
+                                                <rect key="frame" x="90.5" y="21.5" width="233" height="79"/>
+                                                <string key="text">波打つ
+アニメーション</string>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="33"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="3a8-vy-8cy" firstAttribute="centerY" secondItem="jdh-vN-Or6" secondAttribute="centerY" id="p6Y-rx-hy4"/>
+                                            <constraint firstItem="3a8-vy-8cy" firstAttribute="centerX" secondItem="jdh-vN-Or6" secondAttribute="centerX" id="uKJ-iM-yz8"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z17-Ld-5Pt" customClass="ShaderArtView" customModule="SampleShader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="365" width="414" height="122"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRs-XB-AxX">
+                                                <rect key="frame" x="57.5" y="21.5" width="299.5" height="79"/>
+                                                <string key="text">プールの底のような
+アニメーション</string>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="33"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="yRs-XB-AxX" firstAttribute="centerX" secondItem="z17-Ld-5Pt" secondAttribute="centerX" id="X7G-l8-ZgG"/>
+                                            <constraint firstItem="yRs-XB-AxX" firstAttribute="centerY" secondItem="z17-Ld-5Pt" secondAttribute="centerY" id="lNk-VZ-lZ3"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FWa-uP-W9r" customClass="ShaderArtView" customModule="SampleShader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="487" width="414" height="121.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2k-6J-JXw">
+                                                <rect key="frame" x="90.5" y="21" width="233" height="79"/>
+                                                <string key="text">オーロラ風
+アニメーション</string>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="33"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="f2k-6J-JXw" firstAttribute="centerY" secondItem="FWa-uP-W9r" secondAttribute="centerY" id="CPt-I5-9k0"/>
+                                            <constraint firstItem="f2k-6J-JXw" firstAttribute="centerX" secondItem="FWa-uP-W9r" secondAttribute="centerX" id="NX7-pA-tnj"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfg-4l-fV5" customClass="ShaderArtView" customModule="SampleShader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="608.5" width="414" height="122"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDO-pC-mr8">
+                                                <rect key="frame" x="90.5" y="21.5" width="233" height="79"/>
+                                                <string key="text">スケルトン
+アニメーション</string>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="33"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="VDO-pC-mr8" firstAttribute="centerY" secondItem="hfg-4l-fV5" secondAttribute="centerY" id="F0q-B2-uAK"/>
+                                            <constraint firstItem="VDO-pC-mr8" firstAttribute="centerX" secondItem="hfg-4l-fV5" secondAttribute="centerX" id="Mtp-xM-Bwa"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1v-Gz-B8T" customClass="ShaderArtView" customModule="SampleShader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="730.5" width="414" height="121.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRz-1N-omX">
+                                                <rect key="frame" x="90.5" y="21" width="233" height="79"/>
+                                                <string key="text">形容しがたい
+アニメーション</string>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="33"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="WRz-1N-omX" firstAttribute="centerY" secondItem="s1v-Gz-B8T" secondAttribute="centerY" id="bji-rh-vDF"/>
+                                            <constraint firstItem="WRz-1N-omX" firstAttribute="centerX" secondItem="s1v-Gz-B8T" secondAttribute="centerX" id="l7L-wR-IbE"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vjC-7o-aPm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GOH-oM-nnw"/>
+                            <constraint firstAttribute="bottom" secondItem="vjC-7o-aPm" secondAttribute="bottom" id="flL-kv-ZKc"/>
+                            <constraint firstItem="vjC-7o-aPm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jbh-og-1sF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vjC-7o-aPm" secondAttribute="trailing" id="oyT-gZ-mE8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="artView1" destination="uiR-1F-crS" id="ncW-C2-hdp"/>
+                        <outlet property="artView2" destination="aWN-yo-6vc" id="f1c-km-5fQ"/>
+                        <outlet property="artView3" destination="jdh-vN-Or6" id="s7i-Ay-goB"/>
+                        <outlet property="artView4" destination="z17-Ld-5Pt" id="UXM-OD-Gdk"/>
+                        <outlet property="artView5" destination="FWa-uP-W9r" id="Yr5-sS-Ytp"/>
+                        <outlet property="artView6" destination="hfg-4l-fV5" id="DaA-DF-9W9"/>
+                        <outlet property="artView7" destination="s1v-Gz-B8T" id="QAq-hp-S2U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-320" y="91"/>
         </scene>
     </scenes>
 </document>

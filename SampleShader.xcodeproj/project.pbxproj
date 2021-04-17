@@ -13,6 +13,9 @@
 		97CAB6E1262AD88300E1FCBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97CAB6DF262AD88300E1FCBF /* Main.storyboard */; };
 		97CAB6E3262AD88500E1FCBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97CAB6E2262AD88500E1FCBF /* Assets.xcassets */; };
 		97CAB6E6262AD88500E1FCBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97CAB6E4262AD88500E1FCBF /* LaunchScreen.storyboard */; };
+		97CAB6FA262ADAF600E1FCBF /* common.metal in Sources */ = {isa = PBXBuildFile; fileRef = 97CAB6F5262ADAF600E1FCBF /* common.metal */; };
+		97CAB6FB262ADAF600E1FCBF /* ShaderArtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAB6F7262ADAF600E1FCBF /* ShaderArtView.swift */; };
+		97CAB6FC262ADAF600E1FCBF /* shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 97CAB6F9262ADAF600E1FCBF /* shader.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,12 @@
 		97CAB6E2262AD88500E1FCBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97CAB6E5262AD88500E1FCBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97CAB6E7262AD88500E1FCBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97CAB6F5262ADAF600E1FCBF /* common.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = common.metal; sourceTree = "<group>"; };
+		97CAB6F6262ADAF600E1FCBF /* shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shader.h; sourceTree = "<group>"; };
+		97CAB6F7262ADAF600E1FCBF /* ShaderArtView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShaderArtView.swift; sourceTree = "<group>"; };
+		97CAB6F8262ADAF600E1FCBF /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		97CAB6F9262ADAF600E1FCBF /* shader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = shader.metal; sourceTree = "<group>"; };
+		97CAB6FF262ADB3900E1FCBF /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +49,7 @@
 		97CAB6CD262AD88300E1FCBF = {
 			isa = PBXGroup;
 			children = (
+				97CAB6FF262ADB3900E1FCBF /* Bridging-Header.h */,
 				97CAB6D8262AD88300E1FCBF /* SampleShader */,
 				97CAB6D7262AD88300E1FCBF /* Products */,
 			);
@@ -56,6 +66,7 @@
 		97CAB6D8262AD88300E1FCBF /* SampleShader */ = {
 			isa = PBXGroup;
 			children = (
+				97CAB6F4262ADAAF00E1FCBF /* ShaderArtView */,
 				97CAB6D9262AD88300E1FCBF /* AppDelegate.swift */,
 				97CAB6DB262AD88300E1FCBF /* SceneDelegate.swift */,
 				97CAB6DD262AD88300E1FCBF /* ViewController.swift */,
@@ -65,6 +76,18 @@
 				97CAB6E7262AD88500E1FCBF /* Info.plist */,
 			);
 			path = SampleShader;
+			sourceTree = "<group>";
+		};
+		97CAB6F4262ADAAF00E1FCBF /* ShaderArtView */ = {
+			isa = PBXGroup;
+			children = (
+				97CAB6F8262ADAF600E1FCBF /* common.h */,
+				97CAB6F5262ADAF600E1FCBF /* common.metal */,
+				97CAB6F6262ADAF600E1FCBF /* shader.h */,
+				97CAB6F9262ADAF600E1FCBF /* shader.metal */,
+				97CAB6F7262ADAF600E1FCBF /* ShaderArtView.swift */,
+			);
+			path = ShaderArtView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +162,9 @@
 			files = (
 				97CAB6DE262AD88300E1FCBF /* ViewController.swift in Sources */,
 				97CAB6DA262AD88300E1FCBF /* AppDelegate.swift in Sources */,
+				97CAB6FA262ADAF600E1FCBF /* common.metal in Sources */,
+				97CAB6FB262ADAF600E1FCBF /* ShaderArtView.swift in Sources */,
+				97CAB6FC262ADAF600E1FCBF /* shader.metal in Sources */,
 				97CAB6DC262AD88300E1FCBF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.sample.SampleShader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -316,6 +343,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.sample.SampleShader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
