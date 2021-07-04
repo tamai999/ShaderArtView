@@ -43,7 +43,7 @@ extension ShaderArtView {
         // Metalセットアップ
         commandQueue = defaultDevice.makeCommandQueue()
         // 頂点座標バッファ確保＆頂点情報流し込み
-        let vSize = kImagePlaneVertexData.count * MemoryLayout<Uniforms>.size
+        let vSize = kImagePlaneVertexData.count * MemoryLayout<Float>.size
         vertexBuffer = defaultDevice.makeBuffer(bytes: kImagePlaneVertexData, length: vSize, options: [])
         // レンダーパイプライン初期化
         guard let library = defaultDevice.makeDefaultLibrary() else { fatalError() }
